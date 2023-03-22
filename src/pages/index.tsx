@@ -6,6 +6,9 @@ import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const todos = api.todo.getTodos.useQuery();
+
+  console.log("🚀🔥✨index.tsx🚩11行 ", todos);
 
   return (
     <>
