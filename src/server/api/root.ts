@@ -1,5 +1,4 @@
 import { createTRPCRouter } from "~/server/api/trpc";
-import { exampleRouter } from "~/server/api/routers/example";
 import { todoRouter } from "./routers/todo";
 import { userRouter } from "./routers/user";
 

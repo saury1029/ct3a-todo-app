@@ -1,16 +1,13 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Button from "@mui/joy/Button";
 
 import { api } from "~/utils/api";
-import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
 import { Box, Input, Typography } from "@mui/joy";
 
 const Home: NextPage = () => {
   const todos = api.todo.getTodos.useQuery();
-  const session = useSession();
-  const router = useRouter();
+
+  console.log("🚀🔥✨index.tsx🚩12行 ", todos);
 
   return (
     <>
