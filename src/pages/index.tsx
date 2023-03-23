@@ -3,9 +3,14 @@ import Head from "next/head";
 import Button from "@mui/joy/Button";
 
 import { api } from "~/utils/api";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
+import { Box, Input, Typography } from "@mui/joy";
 
 const Home: NextPage = () => {
   const todos = api.todo.getTodos.useQuery();
+  const session = useSession();
+  const router = useRouter();
 
   return (
     <>
@@ -15,7 +20,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <Button>button</Button>
+        <Box
+          sx={{
+            maxWidth: 720,
+            px: "20px",
+            mx: "auto",
+          }}
+        >
+          <Typography
+            level="display2"
+            sx={{
+              mt: 2,
+              mb: 4,
+            }}
+            color="primary"
+          >
+            坚果待办
+          </Typography>
+          <Input size="lg" placeholder="待办项" />
+        </Box>
       </main>
     </>
   );

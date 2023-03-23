@@ -6,7 +6,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body>
+        <body
+          style={{
+            background: "#f5f5f5",
+          }}
+        >
           {getInitColorSchemeScript()}
           <Main />
           <NextScript />

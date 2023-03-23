@@ -3,7 +3,6 @@ import { createTRPCRouter, publicProcedure } from "../trpc";
 
 export const todoRouter = createTRPCRouter({
   getTodos: publicProcedure.query(({ ctx }) => {
-    console.log("🚀🔥✨todo.ts🚩6行 ", ctx.user);
     const todos = ctx.prisma.todo.findMany();
     return todos;
   }),
@@ -17,7 +16,7 @@ export const todoRouter = createTRPCRouter({
       const todo = await ctx.prisma.todo.create({
         data: {
           title: input.title,
-          userId: ctx.user?.id,
+          userId: Number(ctx.user?.id),
         },
       });
       return todo;
