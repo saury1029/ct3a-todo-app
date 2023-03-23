@@ -25,14 +25,14 @@ const Home: NextPage = () => {
           }}
         >
           <Typography
-            level="display2"
+            level="h1"
             sx={{
-              mt: 2,
+              pt: 8,
               mb: 4,
             }}
             color="primary"
           >
-            坚果待办
+            待办清单
           </Typography>
           <Input size="lg" placeholder="待办项" />
         </Box>

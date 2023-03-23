@@ -4,11 +4,18 @@ import { getInitColorSchemeScript } from "@mui/joy/styles";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html
+        style={{
+          background: "#f9f9f9",
+        }}
+      >
         <Head />
         <body
           style={{
-            background: "#f5f5f5",
+            minHeight: "100vh",
+            background:
+              "-webkit-linear-gradient(top, transparent 7px, #f5f5f5 0), -webkit-linear-gradient(left, transparent 7px, #f5f5f5 0)",
+            backgroundSize: "8px 8px",
           }}
         >
           {getInitColorSchemeScript()}

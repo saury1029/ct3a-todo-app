@@ -59,9 +59,8 @@ const Login = () => {
         >
           <div>
             <Typography level="h4" component="h1">
-              <b>Welcome!</b>
+              <b>欢迎，请登录</b>
             </Typography>
-            <Typography level="body2">Sign in to continue.</Typography>
           </div>
           {errorArr && (
             <Alert color="danger" variant="soft">
@@ -69,11 +68,11 @@ const Login = () => {
             </Alert>
           )}
           <FormControl>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>用户名</FormLabel>
             <Input
               name="name"
               type="name"
-              placeholder="name"
+              placeholder="请输入用户名"
               onChange={(e) => {
                 setState({ ...state, name: e.target.value });
               }}
@@ -81,11 +80,11 @@ const Login = () => {
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Password</FormLabel>
+            <FormLabel>密码</FormLabel>
             <Input
               name="password"
               type="password"
-              placeholder="password"
+              placeholder="请输入密码"
               value={state.password}
               onChange={(e) => {
                 setState({ ...state, password: e.target.value });
@@ -94,7 +93,7 @@ const Login = () => {
           </FormControl>
 
           <Button sx={{ mt: 1 }} type="submit">
-            Log in
+            登录
           </Button>
         </Sheet>
       </form>
